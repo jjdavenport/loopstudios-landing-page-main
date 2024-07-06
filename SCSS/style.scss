@@ -30,6 +30,8 @@ body {
   font-size: 0.9375rem;
 }
 
+$white: hsl(0, 0%, 100%);
+
 .attribution {
   display: none;
 }
@@ -38,16 +40,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-}
-
-.main-section {
-  padding: 2rem 2rem 20rem 2rem;
-  background: url(./images/image-hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
+  .main-section {
+    padding: 2rem 2rem 20rem 2rem;
+    background: url(./images/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
 }
 
 .nav {
@@ -76,6 +77,7 @@ main {
     gap: 10rem;
   }
 }
+
 .main-div {
   display: flex;
   justify-content: space-between;
@@ -105,7 +107,8 @@ main {
   flex-direction: column;
   gap: 1rem;
   .main-content__image {
-    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .main-content__description {
     padding: 2rem;
@@ -174,6 +177,7 @@ main {
     border: 0.0625rem solid hsl(0, 0%, 0%);
   }
 }
+
 ul {
   list-style: none;
 }
@@ -221,4 +225,68 @@ a {
 }
 
 @media screen and (width >= 40rem) {
+  main {
+    .main-section {
+      background: url(./images/image-hero-desktop.jpg);
+      background-position: center;
+    }
+  }
+  .nav {
+    flex-direction: row;
+    .nav__list {
+      flex-direction: row;
+    }
+    .nav__link {
+      font-size: 1rem;
+    }
+    .nav__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .main-content {
+    position: relative;
+    flex-direction: row;
+    .main-content__description {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      background: $white;
+    }
+    .main-content__image {
+      width: 100%;
+    }
+  }
+  .creations {
+    .creations__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .creations__list {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    .footer__logo-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer__list {
+      flex-direction: row;
+    }
+    .footer__social-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer__socials {
+      justify-content: flex-end;
+    }
+  }
 }
