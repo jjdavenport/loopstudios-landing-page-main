@@ -32,22 +32,22 @@ function desktop() {
   body.innerHTML = `<main>
       <section class="main-section">
         <nav class="nav">
-         <img src="./images/logo.svg" alt="Loopstudios Logo" class="nav__logo"/>
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Careers</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Events</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Products</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Support</a>
-              </li>
-            </ul>
+          <img src="./images/logo.svg" alt="Loopstudios Logo" class="nav__logo"/>
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Careers</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Events</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Products</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Support</a>
+            </li>
+          </ul>
         </nav>
         <header class="main-header">
           <h1 class="main-header__title">Immersive experiences that deliver</h1>
@@ -70,10 +70,10 @@ function desktop() {
         </div>
       </section>
       <section class="creations">
-            <div class="creations__container">
-        <h3 class="creations__title">Our creations</h3>
-        <button class="creations__button">See all</button>
-    </div>
+        <div class="creations__container">
+          <h3 class="creations__title">Our creations</h3>
+          <button class="creations__button">See all</button>
+        </div>
         <ul class="creations__list">
           <li class="creations__item">
             <span class="creations__name">Deep earth</span>
@@ -82,7 +82,6 @@ function desktop() {
               src="./images/desktop/image-deep-earth.jpg"
               alt="Deep Earth VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Night arcade</span>
@@ -91,7 +90,6 @@ function desktop() {
               src="./images/desktop/image-night-arcade.jpg"
               alt="Night Arcade VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Soccer team VR</span>
@@ -100,7 +98,6 @@ function desktop() {
               src="./images/desktop/image-soccer-team.jpg"
               alt="Soccer Team VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The grid</span>
@@ -109,7 +106,6 @@ function desktop() {
               src="./images/desktop/image-grid.jpg"
               alt="The Grid VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">From up above VR</span>
@@ -118,7 +114,6 @@ function desktop() {
               src="./images/desktop/image-from-above.jpg"
               alt="From Up Above VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Pocket borealis</span>
@@ -127,7 +122,6 @@ function desktop() {
               src="./images/desktop/image-pocket-borealis.jpg"
               alt="Pocket Borealis VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The curiosity</span>
@@ -136,7 +130,6 @@ function desktop() {
               src="./images/desktop/image-curiosity.jpg"
               alt="The Curiosity VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Make it fisheye</span>
@@ -145,71 +138,74 @@ function desktop() {
               src="./images/desktop/image-fisheye.jpg"
               alt="Make it Fisheye VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
         </ul>
       </section>
       <section class="footer">
-    <div class="footer__logo-container">
-        <img
+        <div class="footer__logo-container">
+          <img
             class="footer__logo"
             src="./images/logo.svg"
             alt="Loopstudios logo"
-        />
-        <ul class="footer__list">
+          />
+          <ul class="footer__list">
             <li class="footer__item">
-                <a class="footer__link" href="#">About</a>
+              <a class="footer__link" href="#">About</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Careers</a>
+              <a class="footer__link" href="#">Careers</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Events</a>
+              <a class="footer__link" href="#">Events</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Products</a>
+              <a class="footer__link" href="#">Products</a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="#">Support</a>
+              <a class="footer__link" href="#">Support</a>
             </li>
-        </ul>
-    </div>
-    <div class="footer__social-container">
-        <ul class="footer__socials">
+          </ul>
+        </div>
+        <div class="footer__social-container">
+          <ul class="footer__socials">
             <li class="footer__social-item">
-                <img
-                    class="footer__social-icon"
-                    src="./images/icon-facebook.svg"
-                    alt="Facebook icon"
-                />
-            </li>
-            <li class="footer__social-item">
-                <img
-                    class="footer__social-icon"
-                    src="./images/icon-twitter.svg"
-                    alt="Twitter icon"
-                />
+              <img
+                class="footer__social-icon"
+                src="./images/icon-facebook.svg"
+                alt="Facebook icon"
+                aria-label="Facebook"
+              />
             </li>
             <li class="footer__social-item">
-                <img
-                    class="footer__social-icon"
-                    src="./images/icon-pinterest.svg"
-                    alt="Pinterest icon"
-                />
+              <img
+                class="footer__social-icon"
+                src="./images/icon-twitter.svg"
+                alt="Twitter icon"
+                aria-label="Twitter"
+              />
             </li>
             <li class="footer__social-item">
-                <img
-                    class="footer__social-icon"
-                    src="./images/icon-instagram.svg"
-                    alt="Instagram icon"
-                />
+              <img
+                class="footer__social-icon"
+                src="./images/icon-pinterest.svg"
+                alt="Pinterest icon"
+                aria-label="Pinterest"
+              />
             </li>
-        </ul>
-        <p class="footer__text">© 2021 Loopstudios. All rights reserved.</p>
-    </div>
-</section>
-      </main>
-          <footer class="attribution">
+            <li class="footer__social-item">
+              <img
+                class="footer__social-icon"
+                src="./images/icon-instagram.svg"
+                alt="Instagram icon"
+                aria-label="Instagram"
+              />
+            </li>
+          </ul>
+          <p class="footer__text">© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
@@ -220,14 +216,18 @@ function desktop() {
 function mobile() {
   const body = document.getElementById("body");
   body.innerHTML = `
-         <main>
+  <main>
       <section class="main-section">
         <nav class="nav">
-        <img src="./images/logo.svg" alt="Loopstudios Logo" />
+          <img src="./images/logo.svg" alt="Loopstudios Logo" />
           <dialog class="nav__dialog" id="navDialog">
             <div class="main-div">
               <img src="./images/logo.svg" alt="Loopstudios logo" />
-              <button class="main-div__close-button" id="navDialogCloseBtn">
+              <button
+                class="main-div__close-button"
+                id="navDialogCloseBtn"
+                aria-label="Close navigation menu"
+              >
                 <img
                   class="main-div__close-icon"
                   src="./images/icon-close.svg"
@@ -251,7 +251,13 @@ function mobile() {
               </li>
             </ul>
           </dialog>
-          <button class="nav__button" id="navBtn">
+          <button
+            class="nav__button"
+            id="navBtn"
+            aria-controls="navDialog"
+            aria-haspopup="dialog"
+            aria-label="Open navigation menu"
+          >
             <svg
               class="nav__icon"
               width="16"
@@ -297,7 +303,6 @@ function mobile() {
               src="./images/mobile/image-deep-earth.jpg"
               alt="Deep Earth VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Night arcade</span>
@@ -306,7 +311,6 @@ function mobile() {
               src="./images/mobile/image-night-arcade.jpg"
               alt="Night Arcade VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Soccer team VR</span>
@@ -315,7 +319,6 @@ function mobile() {
               src="./images/mobile/image-soccer-team.jpg"
               alt="Soccer Team VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The grid</span>
@@ -324,7 +327,6 @@ function mobile() {
               src="./images/mobile/image-grid.jpg"
               alt="The Grid VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">From up above VR</span>
@@ -333,7 +335,6 @@ function mobile() {
               src="./images/mobile/image-from-above.jpg"
               alt="From Up Above VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Pocket borealis</span>
@@ -342,7 +343,6 @@ function mobile() {
               src="./images/mobile/image-pocket-borealis.jpg"
               alt="Pocket Borealis VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The curiosity</span>
@@ -351,7 +351,6 @@ function mobile() {
               src="./images/mobile/image-curiosity.jpg"
               alt="The Curiosity VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Make it fisheye</span>
@@ -360,7 +359,6 @@ function mobile() {
               src="./images/mobile/image-fisheye.jpg"
               alt="Make it Fisheye VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
         </ul>
         <button class="creations__button">See all</button>

@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -14,7 +12,6 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
     <link rel="stylesheet" href="./SCSS/style.css" />
     <script src="./main.js" defer></script>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body id="body">
     <main>
@@ -24,7 +21,11 @@
           <dialog class="nav__dialog" id="navDialog">
             <div class="main-div">
               <img src="./images/logo.svg" alt="Loopstudios logo" />
-              <button class="main-div__close-button" id="navDialogCloseBtn">
+              <button
+                class="main-div__close-button"
+                id="navDialogCloseBtn"
+                aria-label="Close navigation menu"
+              >
                 <img
                   class="main-div__close-icon"
                   src="./images/icon-close.svg"
@@ -33,9 +34,7 @@
               </button>
             </div>
             <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="#">About</a>
-              </li>
+              <li class="nav__item"><a class="nav__link" href="#">About</a></li>
               <li class="nav__item">
                 <a class="nav__link" href="#">Careers</a>
               </li>
@@ -50,7 +49,13 @@
               </li>
             </ul>
           </dialog>
-          <button class="nav__button" id="navBtn">
+          <button
+            class="nav__button"
+            id="navBtn"
+            aria-controls="navDialog"
+            aria-haspopup="dialog"
+            aria-label="Open navigation menu"
+          >
             <svg
               class="nav__icon"
               width="16"
@@ -87,10 +92,7 @@
         </div>
       </section>
       <section class="creations">
-        <div>
-          <h3 class="creations__title">Our creations</h3>
-          <button class="creations__button">See all</button>
-        </div>
+        <h3 class="creations__title">Our creations</h3>
         <ul class="creations__list">
           <li class="creations__item">
             <span class="creations__name">Deep earth</span>
@@ -99,7 +101,6 @@
               src="./images/mobile/image-deep-earth.jpg"
               alt="Deep Earth VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Night arcade</span>
@@ -108,7 +109,6 @@
               src="./images/mobile/image-night-arcade.jpg"
               alt="Night Arcade VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Soccer team VR</span>
@@ -117,7 +117,6 @@
               src="./images/mobile/image-soccer-team.jpg"
               alt="Soccer Team VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The grid</span>
@@ -126,7 +125,6 @@
               src="./images/mobile/image-grid.jpg"
               alt="The Grid VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">From up above VR</span>
@@ -135,7 +133,6 @@
               src="./images/mobile/image-from-above.jpg"
               alt="From Up Above VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Pocket borealis</span>
@@ -144,7 +141,6 @@
               src="./images/mobile/image-pocket-borealis.jpg"
               alt="Pocket Borealis VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">The curiosity</span>
@@ -153,7 +149,6 @@
               src="./images/mobile/image-curiosity.jpg"
               alt="The Curiosity VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
           <li class="creations__item">
             <span class="creations__name">Make it fisheye</span>
@@ -162,9 +157,9 @@
               src="./images/mobile/image-fisheye.jpg"
               alt="Make it Fisheye VR experience"
             />
-            <div class="creations__overlay"></div>
           </li>
         </ul>
+        <button class="creations__button">See all</button>
       </section>
       <section class="footer">
         <img
