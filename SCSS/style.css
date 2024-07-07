@@ -15,7 +15,16 @@ body {
 }
 
 .attribution {
-  display: none;
+  font-family: "alata", sans-serif;
+  font-weight: 400;
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 41%);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 0.6875rem;
 }
 
 main {
@@ -59,6 +68,16 @@ main .main-section {
   flex-direction: column;
   gap: 10rem;
 }
+.nav .nav__button {
+  border: none;
+  background: none;
+}
+.nav .nav__button:hover {
+  cursor: pointer;
+}
+.nav .nav__icon-path {
+  fill: hsl(0, 0%, 100%);
+}
 
 .main-div {
   display: flex;
@@ -71,30 +90,22 @@ main .main-section {
   background: none;
 }
 
+.main-div__close-button:hover {
+  cursor: pointer;
+}
+
 .nav__dialog--active {
   display: flex;
 }
 
-.nav__button {
-  border: none;
-  background: none;
-}
-
-.nav__icon-path {
-  fill: hsl(0, 0%, 100%);
-}
-
 .main-content {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.main-content .main-content__image {
-  width: 100%;
-  object-fit: cover;
-}
 .main-content .main-content__description {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -105,24 +116,29 @@ main .main-section {
   text-transform: uppercase;
 }
 .main-content .main-content__description .main-content__text {
+  font-family: "alata", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 55%);
   text-align: center;
   line-height: 2rem;
 }
 
-.main-content,
-.creations {
-  padding: 2rem;
+.main-header {
+  padding: 1rem;
+  border: 0.125rem solid hsl(0, 0%, 100%);
+  overflow: hidden;
 }
 
 .main-header__title {
-  padding: 1rem;
+  width: 8ch;
   color: hsl(0, 0%, 100%);
-  border: 0.125rem solid hsl(0, 0%, 100%);
   text-transform: uppercase;
   font-size: 2.5rem;
+  letter-spacing: 0.0938rem;
 }
 
 .creations {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,19 +161,37 @@ main .main-section {
 .creations .creations__item {
   position: relative;
 }
+.creations .creations__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
 .creations .creations__name {
+  font-size: clamp(0.625rem, -0.0962rem + 5.7692vw, 2.5rem);
+  width: 10ch;
   text-transform: uppercase;
   position: absolute;
-  top: 60%;
+  top: 40%;
   left: 5%;
   color: hsl(0, 0%, 100%);
+  z-index: 999;
 }
 .creations .creations__button {
-  width: 12.5rem;
+  font-size: 1.25rem;
+  width: 9.375rem;
   height: 40px;
   text-transform: uppercase;
   background: none;
   border: 0.0625rem solid hsl(0, 0%, 0%);
+}
+.creations .creations__button:hover {
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 ul {
@@ -172,7 +206,7 @@ a {
 .footer {
   font-family: "alata", sans-serif;
   font-weight: 400;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   background: hsl(0, 0%, 0%);
   display: flex;
   flex-direction: column;
@@ -202,41 +236,87 @@ a {
   display: flex;
   justify-content: center;
 }
+.footer .footer__social-item:hover {
+  cursor: pointer;
+}
 .footer .footer__text {
+  font-family: "alata", sans-serif;
+  font-weight: 400;
   text-align: center;
   color: hsl(0, 0%, 41%);
 }
 
-@media screen and (width >= 40rem) {
+@media screen and (width >= 45rem) {
   main .main-section {
     background: url(./images/image-hero-desktop.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 4rem 10rem 4rem;
+  }
+  main .main-header__title {
+    width: 16ch;
+    font-size: 4rem;
+  }
+  .main-header {
+    padding: 2rem;
+    width: fit-content;
   }
   .nav {
     flex-direction: row;
+  }
+  .nav .nav__logo {
+    padding-bottom: 0.75rem;
   }
   .nav .nav__list {
     flex-direction: row;
   }
   .nav .nav__link {
+    font-family: "alata", sans-serif;
+    font-weight: 400;
+    text-transform: none;
     font-size: 1rem;
   }
   .nav .nav__item {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+    position: relative;
+    border-bottom: 4px solid transparent;
+  }
+  .nav .nav__item::before {
+    padding-bottom: 0.5rem;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-bottom: 4px solid #fff;
+    display: none;
+  }
+  .nav .nav__item:hover::before {
+    display: block;
   }
   .main-content {
+    padding: 4rem;
     position: relative;
     flex-direction: row;
   }
   .main-content .main-content__description {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 2rem;
+    right: 2rem;
+    height: 60%;
+    width: 40%;
+    padding: 2rem;
     background: hsl(0, 0%, 100%);
   }
   .main-content .main-content__image {
-    width: 100%;
+    width: 80%;
+  }
+  .creations {
+    padding: 4rem;
   }
   .creations .creations__container {
     display: flex;
@@ -248,7 +328,13 @@ a {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
   }
+  .creations .creations__name {
+    font-size: clamp(1.125rem, -0.25rem + 3.0556vw, 2.5rem);
+    top: 75%;
+    left: 15%;
+  }
   .footer {
+    padding: 4rem 4rem 0rem 4rem;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -267,5 +353,43 @@ a {
   }
   .footer .footer__socials {
     justify-content: flex-end;
+  }
+  .footer .footer__social-item {
+    padding-bottom: 8px;
+    border-bottom: 0.25rem solid transparent;
+  }
+  .footer .footer__social-item:hover {
+    cursor: pointer;
+    border-bottom: 0.25rem solid #fff;
+  }
+  .footer .footer__logo {
+    padding-bottom: 0.75rem;
+  }
+  .footer .footer__item {
+    padding-bottom: 0.5rem;
+    position: relative;
+    border-bottom: 4px solid transparent;
+  }
+  .footer .footer__text {
+    padding-bottom: 0.75rem;
+  }
+  .footer .footer__item::before {
+    padding-bottom: 0.5rem;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-bottom: 4px solid #fff;
+    display: none;
+  }
+  .footer .footer__item:hover::before {
+    display: block;
+  }
+  .attribution {
+    text-align: end;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
