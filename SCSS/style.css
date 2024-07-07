@@ -263,13 +263,13 @@ a {
   color: hsl(0, 0%, 41%);
 }
 
-@media screen and (width >= 45rem) {
+@media screen and (width >= 800px) {
   main .main-section {
     background: url(./images/image-hero-desktop.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2rem 4rem 10rem 4rem;
+    padding: 2rem 8rem 8rem 8rem;
   }
   main .main-header__title {
     width: 16ch;
@@ -316,7 +316,7 @@ a {
     display: block;
   }
   .main-content {
-    padding: 4rem 4rem 0rem 4rem;
+    padding: 8rem 8rem 0rem 8rem;
     position: relative;
     flex-direction: row;
   }
@@ -344,7 +344,7 @@ a {
     flex: 1;
   }
   .creations {
-    padding: 4rem;
+    padding: 8rem;
   }
   .creations .creations__container {
     display: flex;
@@ -358,11 +358,11 @@ a {
   }
   .creations .creations__name {
     font-size: clamp(1.125rem, -0.25rem + 3.0556vw, 2.5rem);
-    top: 75%;
-    left: 15%;
+    top: 70%;
+    left: 5%;
   }
   .footer {
-    padding: 4rem 4rem 0rem 4rem;
+    padding: 2rem 8rem 0rem 8rem;
     flex-direction: row;
     justify-content: space-between;
   }

@@ -16,7 +16,7 @@ function buttons() {
 
 function desktopMobile() {
   const width = window.innerWidth;
-  if (width >= 720) {
+  if (width >= 800) {
     desktop();
   } else {
     mobile();
