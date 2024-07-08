@@ -12,7 +12,7 @@
 }
 
 @mixin secondary-font {
-  font-family: "josefin-sans", sans-serif;
+  font-family: "josefin sans", sans-serif;
   font-weight: 300;
 }
 
@@ -236,6 +236,7 @@ main {
   }
   .creations__item:hover .creations__name {
     color: $black;
+    cursor: pointer;
   }
   .creations__button {
     font-size: 1.25rem;

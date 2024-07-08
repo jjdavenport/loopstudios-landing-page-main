@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  font-family: "josefin-sans", sans-serif;
+  font-family: "josefin sans", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -196,6 +196,7 @@ main .main-section {
 }
 .creations .creations__item:hover .creations__name {
   color: hsl(0, 0%, 0%);
+  cursor: pointer;
 }
 .creations .creations__button {
   font-size: 1.25rem;
