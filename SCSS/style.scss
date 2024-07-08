@@ -309,7 +309,8 @@ a {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 2rem 8rem 8rem 8rem;
+      padding: 4rem clamp(0.5rem, -11.375rem + 23.75vw, 10rem) 8rem
+        clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
     }
     .main-header__title {
       width: 16ch;
@@ -346,7 +347,8 @@ a {
     }
   }
   .main-content {
-    padding: 8rem 8rem 0rem 8rem;
+    padding: 8rem clamp(0.5rem, -11.375rem + 23.75vw, 10rem) 0rem
+      clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
     position: relative;
     flex-direction: row;
     .main-content__image {
@@ -355,7 +357,7 @@ a {
     .main-content__description {
       position: absolute;
       bottom: -5px;
-      right: 4rem;
+      right: clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
       height: 60%;
       width: 40%;
       padding: 0;
@@ -374,7 +376,7 @@ a {
     }
   }
   .creations {
-    padding: 8rem;
+    padding: clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
     .creations__container {
       display: flex;
       justify-content: space-between;
@@ -390,9 +392,13 @@ a {
       top: 70%;
       left: 5%;
     }
+    .creations__title {
+      font-size: clamp(2rem, -0.5rem + 5vw, 4rem);
+    }
   }
   .footer {
-    padding: 2rem 8rem 0rem 8rem;
+    padding: 2rem clamp(0.5rem, -11.375rem + 23.75vw, 10rem) 0rem
+      clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
     flex-direction: row;
     justify-content: space-between;
     .footer__logo-container {
@@ -437,7 +443,7 @@ a {
   }
   .attribution {
     text-align: end;
-    padding-right: 8rem;
+    padding-right: clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
     padding-bottom: 2rem;
   }
 }
