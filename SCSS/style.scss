@@ -239,6 +239,9 @@ main {
     cursor: pointer;
   }
   .creations__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.25rem;
     width: 9.375rem;
     height: 40px;
@@ -357,10 +360,12 @@ a {
     }
     .main-content__description {
       position: absolute;
-      bottom: -5px;
+      bottom: 0;
+      right: 0;
       right: clamp(0.5rem, -11.375rem + 23.75vw, 10rem);
-      height: 60%;
-      width: 40%;
+      height: fit-content;
+      width: fit-content;
+      max-width: 40%;
       padding: 0;
       background: $white;
       padding-left: clamp(0.5rem, -5rem + 12.2222vw, 6rem);
@@ -381,6 +386,7 @@ a {
     .creations__container {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       width: 100%;
     }
     .creations__list {
